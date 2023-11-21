@@ -3,38 +3,32 @@ package com.example.splaboratoryproject;
 import java.util.ArrayList;
 import java.util.List;
 
-class Book {
+class Book extends Section{
     private String title;
-    private List<Author> authors;
-    private List<Chapter> chapters;
+    private List<Author> author;
+    private TableOfContents tableOfContents;
 
     public Book(String title) {
+        super("Front Cover");
         this.title = title;
-        this.authors = new ArrayList<>();
-        this.chapters = new ArrayList<>();
+        this.author = new ArrayList<>();
+        this.tableOfContents = tableOfContents;
     }
 
-    public void addAuthor(Author author) {
-        authors.add(author);
-    }
-
-    public int createChapter(String chapterName) {
-        Chapter chapter = new Chapter(chapterName);
-        chapters.add(chapter);
-        return chapters.indexOf(chapter);
-    }
-
-    public Chapter getChapter(int index) {
-        if (index >= 0 && index < chapters.size()) {
-            return chapters.get(index);
+    public void print() {
+        System.out.println("Clase.Book Title: " + title);
+        for (Author a : author) {
+            a.print();
         }
-        return null;
     }
 
-    public String getTitle() {
-        return title;
+    public void addAuthor(Author autor) {
+        author.add(autor);
+    }
+
+    public void addContent(Element cap1) {
+        super.add(cap1);
     }
 }
-
 
 
