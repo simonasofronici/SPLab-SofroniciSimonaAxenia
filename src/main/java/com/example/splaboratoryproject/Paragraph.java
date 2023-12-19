@@ -3,7 +3,7 @@ package com.example.splaboratoryproject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Paragraph implements Element {
+public class Paragraph implements Element , Visitee{
     private String text;
     private AlignStrategy alignStrategy; // New field for alignment strategy
 
@@ -42,6 +42,11 @@ public class Paragraph implements Element {
     public Element get(int number) {
         // You may implement this method if needed
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+
     }
 }
 

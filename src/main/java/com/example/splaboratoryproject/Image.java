@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Image implements Element{
+public class Image implements Element, Visitee{
     private String imageName;
 
     public Image(String name) {
@@ -46,6 +46,10 @@ public class Image implements Element{
     }
 
 
+    @Override
+    public void accept(Visitor visitor) {
+
+    }
 }
 
 

@@ -1,8 +1,15 @@
 package com.example.splaboratoryproject;
 
-class TableOfContents implements Element{
+class TableOfContents implements Element, Visitee{
+    private String text;
+
+    public TableOfContents(String text) {
+        this.text = text;
+    }
+
+    @Override
     public void print() {
-        System.out.println("Clase.Table of Contents");
+        System.out.println(text);
     }
 
     @Override
@@ -16,7 +23,12 @@ class TableOfContents implements Element{
     }
 
     @Override
-    public Element get(int index) {
+    public Element get(int number) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+
     }
 }
