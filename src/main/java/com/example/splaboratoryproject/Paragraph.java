@@ -3,54 +3,45 @@ package com.example.splaboratoryproject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Paragraph implements Element{
+public class Paragraph implements Element {
     private String text;
+    private AlignStrategy alignStrategy; // New field for alignment strategy
 
     public Paragraph(String text) {
         this.text = text;
     }
 
+    public String getText() {
+        return text;
+    }
+
+    public void setAlignStrategy(AlignStrategy alignStrategy) {
+        this.alignStrategy = alignStrategy;
+    }
+
+    @Override
     public void print() {
-        System.out.println("Clase.Paragraph: " + text);
+        if (alignStrategy != null) {
+            alignStrategy.render(this, null); // Pass null for Context since it's not used in the example
+        } else {
+            System.out.println("Paragraph: " + getText());
+        }
     }
 
     @Override
     public void addElement(Element element) {
-
+        // You may implement this method if needed
     }
 
     @Override
     public void removeElement(Element element) {
-
+        // You may implement this method if needed
     }
 
-    private List<Paragraph> paragraphs;
-
-    public Paragraph() {
-        this.paragraphs = new ArrayList<>();
-    }
-
-    public void add(Paragraph paragraph) {
-        paragraphs.add(paragraph);
-    }
-
-    public Paragraph get(int index) {
-        if (index >= 0 && index < paragraphs.size()) {
-            return paragraphs.get(index);
-        }
+    @Override
+    public Element get(int number) {
+        // You may implement this method if needed
         return null;
-    }
-
-    public void remove(int index) {
-        if (index >= 0 && index < paragraphs.size()) {
-            paragraphs.remove(index);
-        }
-    }
-
-    public void printAll() {
-        for (Paragraph paragraph : paragraphs) {
-            paragraph.print();
-        }
     }
 }
 
