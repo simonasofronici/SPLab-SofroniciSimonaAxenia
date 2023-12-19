@@ -7,6 +7,10 @@ class Author {
         this.name = name;
     }
 
+    public void print() {
+        System.out.println("Clase.Author: " + name);
+    }
+
     public String getName() {
         return name;
     }

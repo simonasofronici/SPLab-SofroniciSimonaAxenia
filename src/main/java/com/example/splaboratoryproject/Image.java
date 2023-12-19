@@ -1,15 +1,52 @@
 package com.example.splaboratoryproject;
 
 
-class Image {
+import java.util.concurrent.TimeUnit;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Image implements Element{
     private String imageName;
 
-    public Image(String imageName) {
-        this.imageName = imageName;
+    public Image(String name) {
+        imageName = name;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getImageName() {
         return imageName;
     }
+
+    @Override
+    public void print() {
+        System.out.println("Image with name: " + getImageName());
+    }
+
+    @Override
+    public void addElement(Element element) {
+
+    }
+
+    @Override
+    public void removeElement(Element element) {
+
+    }
+
+    @Override
+    public Element get(int number) {
+        return null;
+    }
+
+
 }
+
+
 

@@ -1,11 +1,10 @@
 package com.example.splaboratoryproject;
-
 import java.util.ArrayList;
 import java.util.List;
 
-class Chapter {
+public class Chapter{
     private String name;
-    private List<SubChapter> subChapters;
+    private List<Element> subChapters;
 
     public Chapter(String name) {
         this.name = name;
@@ -14,13 +13,13 @@ class Chapter {
 
     public int createSubChapter(String subChapterName) {
         SubChapter subChapter = new SubChapter(subChapterName);
-        subChapters.add(subChapter);
+        subChapters.add((Element) subChapter);
         return subChapters.indexOf(subChapter);
     }
 
     public SubChapter getSubChapter(int index) {
         if (index >= 0 && index < subChapters.size()) {
-            return subChapters.get(index);
+            return (SubChapter) subChapters.get(index);
         }
         return null;
     }
@@ -28,7 +27,5 @@ class Chapter {
     public String getName() {
         return name;
     }
+
 }
-
-
-

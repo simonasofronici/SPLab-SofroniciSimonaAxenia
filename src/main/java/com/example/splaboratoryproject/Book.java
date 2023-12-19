@@ -3,13 +3,12 @@ package com.example.splaboratoryproject;
 import java.util.ArrayList;
 import java.util.List;
 
-class Book {
-    private String title;
+public class Book extends Section implements Element {
     private List<Author> authors;
     private List<Chapter> chapters;
 
     public Book(String title) {
-        this.title = title;
+        super(title);
         this.authors = new ArrayList<>();
         this.chapters = new ArrayList<>();
     }
@@ -31,10 +30,26 @@ class Book {
         return null;
     }
 
-    public String getTitle() {
-        return title;
+    @Override
+    public void print() {
+        System.out.println("Book: " + getTitle());
+        System.out.println("Authors:");
+        for (Author author : authors) {
+            System.out.println(author.getName());
+        }
+        for (Element content : super.getElements()) {
+            content.print();
+        }
+    }
+
+
+    public List<Element> getElements() {
+        return super.getElements();
+    }
+
+    public void addContent(Element element) {
+        getElements().add(element);
     }
 }
-
 
 
