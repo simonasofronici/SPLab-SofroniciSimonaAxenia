@@ -3,7 +3,7 @@ package com.example.splaboratoryproject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book extends Section implements Element {
+public class Book extends Section implements Element,Visitee {
     private List<Author> authors;
     private List<Chapter> chapters;
 
@@ -49,6 +49,11 @@ public class Book extends Section implements Element {
 
     public void addContent(Element element) {
         getElements().add(element);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+
     }
 }
 

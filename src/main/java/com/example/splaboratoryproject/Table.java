@@ -4,36 +4,35 @@ package com.example.splaboratoryproject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Table {
-    private String title;
-    private List<String> elements;
+public class Table implements Element,Visitee {
+    private String tableTitle;
 
-    public Table(String title) {
-        this.title = title;
-        this.elements = new ArrayList<>();
+    public Table(String tableTitle) {
+        this.tableTitle = tableTitle;
     }
 
+    @Override
     public void print() {
-        System.out.println("Clase.Table Title: " + title);
-        for (String element : elements) {
-            System.out.println(element);
-        }
+        System.out.println(tableTitle);
     }
 
-    public void add(String element) {
-        elements.add(element);
+    @Override
+    public void addElement(Element element) {
+
     }
 
-    public String get(int index) {
-        if (index >= 0 && index < elements.size()) {
-            return elements.get(index);
-        }
+    @Override
+    public void removeElement(Element element) {
+
+    }
+
+    @Override
+    public Element get(int number) {
         return null;
     }
 
-    public void remove(int index) {
-        if (index >= 0 && index < elements.size()) {
-            elements.remove(index);
-        }
+    @Override
+    public void accept(Visitor visitor) {
+
     }
 }

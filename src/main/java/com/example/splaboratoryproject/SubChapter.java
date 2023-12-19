@@ -3,7 +3,7 @@ package com.example.splaboratoryproject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubChapter implements Element {
+public class SubChapter implements Element, Visitee {
     private String name;
     private List<Object> content;
 
@@ -43,5 +43,10 @@ public class SubChapter implements Element {
     @Override
     public Element get(int number) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+
     }
 }

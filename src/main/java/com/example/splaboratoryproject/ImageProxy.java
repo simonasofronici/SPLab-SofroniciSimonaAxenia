@@ -1,6 +1,6 @@
 package com.example.splaboratoryproject;
 
-public class ImageProxy implements Element {
+public class ImageProxy implements Element, Visitee {
     private Image realImage;
     private String imageName;
 
@@ -33,5 +33,10 @@ public class ImageProxy implements Element {
     @Override
     public Element get(int number) {
         return loadImage().get(number);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+
     }
 }
