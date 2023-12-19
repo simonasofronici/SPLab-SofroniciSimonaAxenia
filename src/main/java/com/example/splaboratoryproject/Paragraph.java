@@ -15,12 +15,12 @@ public class Paragraph implements Element{
     }
 
     @Override
-    public void add(Element element) {
+    public void addElement(Element element) {
 
     }
 
     @Override
-    public void remove(Element element) {
+    public void removeElement(Element element) {
 
     }
 

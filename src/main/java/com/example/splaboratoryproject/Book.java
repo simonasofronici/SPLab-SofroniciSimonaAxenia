@@ -3,31 +3,52 @@ package com.example.splaboratoryproject;
 import java.util.ArrayList;
 import java.util.List;
 
-class Book extends Section{
-    private String title;
-    private List<Author> author;
-    private TableOfContents tableOfContents;
+public class Book extends Section implements Element {
+    private List<Author> authors;
+    private List<Chapter> chapters;
 
     public Book(String title) {
-        super("Front Cover");
-        this.title = title;
-        this.author = new ArrayList<>();
-        this.tableOfContents = tableOfContents;
+        super(title);
+        this.authors = new ArrayList<>();
+        this.chapters = new ArrayList<>();
     }
 
+    public void addAuthor(Author author) {
+        authors.add(author);
+    }
+
+    public int createChapter(String chapterName) {
+        Chapter chapter = new Chapter(chapterName);
+        chapters.add(chapter);
+        return chapters.indexOf(chapter);
+    }
+
+    public Chapter getChapter(int index) {
+        if (index >= 0 && index < chapters.size()) {
+            return chapters.get(index);
+        }
+        return null;
+    }
+
+    @Override
     public void print() {
-        System.out.println("Clase.Book Title: " + title);
-        for (Author a : author) {
-            a.print();
+        System.out.println("Book: " + getTitle());
+        System.out.println("Authors:");
+        for (Author author : authors) {
+            System.out.println(author.getName());
+        }
+        for (Element content : super.getElements()) {
+            content.print();
         }
     }
 
-    public void addAuthor(Author autor) {
-        author.add(autor);
+
+    public List<Element> getElements() {
+        return super.getElements();
     }
 
-    public void addContent(Element cap1) {
-        super.add(cap1);
+    public void addContent(Element element) {
+        getElements().add(element);
     }
 }
 

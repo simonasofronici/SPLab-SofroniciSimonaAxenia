@@ -1,8 +1,10 @@
 package com.example.splaboratoryproject;
 
 public interface Element {
-    void print();
-    void add(Element element);
-    void remove(Element element);
-    Element get(int index);
+
+    public void print();
+    public void addElement(Element element);
+    public void removeElement(Element element);
+    public Element get(int number);
+
 }
