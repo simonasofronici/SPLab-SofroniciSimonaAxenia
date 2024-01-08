@@ -6,3 +6,4 @@ public class AlignCenter implements AlignStrategy {
         System.out.println("Aligning to the center: " + p.getText());
     }
 }
+

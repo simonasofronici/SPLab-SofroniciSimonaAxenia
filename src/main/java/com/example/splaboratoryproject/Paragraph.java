@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Paragraph implements Element , Visitee{
     private String text;
-    private AlignStrategy alignStrategy; // New field for alignment strategy
+    private AlignStrategy alignStrategy; // New field alignment strategy
 
     public Paragraph(String text) {
         this.text = text;
@@ -30,17 +30,14 @@ public class Paragraph implements Element , Visitee{
 
     @Override
     public void addElement(Element element) {
-        // You may implement this method if needed
     }
 
     @Override
     public void removeElement(Element element) {
-        // You may implement this method if needed
     }
 
     @Override
     public Element get(int number) {
-        // You may implement this method if needed
         return null;
     }
 

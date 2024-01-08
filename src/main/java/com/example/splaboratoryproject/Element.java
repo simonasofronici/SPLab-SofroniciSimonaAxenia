@@ -1,6 +1,6 @@
 package com.example.splaboratoryproject;
 
-public interface Element {
+public interface Element extends Visitee{
 
     public void print();
     public void addElement(Element element);

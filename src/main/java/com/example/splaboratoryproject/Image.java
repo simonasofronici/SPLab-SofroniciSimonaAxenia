@@ -3,13 +3,8 @@ package com.example.splaboratoryproject;
 
 import java.util.concurrent.TimeUnit;
 
-import java.util.ArrayList;
-import java.util.List;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Image implements Element, Visitee{
+public class Image implements Element, Visitee {
     private String imageName;
 
     public Image(String name) {
@@ -49,6 +44,12 @@ public class Image implements Element, Visitee{
     @Override
     public void accept(Visitor visitor) {
 
+        visitor.visitImage(this);
+    }
+
+    public String getName() {
+
+        return imageName;
     }
 }
 

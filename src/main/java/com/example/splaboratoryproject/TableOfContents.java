@@ -1,25 +1,32 @@
 package com.example.splaboratoryproject;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+public class TableOfContents implements Element, Visitee {
+    private List<String> entries;
 
-class TableOfContents implements Element, Visitee{
-    private String text;
+    public TableOfContents() {
+        this.entries = new ArrayList<>();
+    }
 
-    public TableOfContents(String text) {
-        this.text = text;
+    public void addEntry(String entry) {
+        entries.add(entry);
     }
 
     @Override
     public void print() {
-        System.out.println(text);
+        System.out.println("Table of Contents:");
+        for (String entry : entries) {
+            System.out.println(entry);
+        }
     }
 
     @Override
     public void addElement(Element element) {
-
     }
 
     @Override
     public void removeElement(Element element) {
-
     }
 
     @Override
@@ -29,6 +36,11 @@ class TableOfContents implements Element, Visitee{
 
     @Override
     public void accept(Visitor visitor) {
+        visitor.visitTableOfContents(this);
+    }
 
+    public Collection<String> getEntries() {
+
+        return entries;
     }
 }

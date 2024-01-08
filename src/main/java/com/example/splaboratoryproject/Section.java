@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import com.example.splaboratoryproject.Element;
 
-public class Section implements Element {
+public class Section implements Element, Visitee {
 
     @Getter
     @Setter
@@ -51,5 +51,14 @@ public class Section implements Element {
 
     public void add(Element element){
         elements.add(element);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+
+        visitor.visitSection(this);
+        for(Element e : elements){
+            e.accept(visitor);
+        }
     }
 }
