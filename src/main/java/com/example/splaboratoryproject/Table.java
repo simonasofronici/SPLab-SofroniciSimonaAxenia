@@ -1,10 +1,13 @@
 package com.example.splaboratoryproject;
 
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Table implements Element,Visitee {
+@Getter
+public class Table implements Element, Visitee {
     private String tableTitle;
 
     public Table(String tableTitle) {
@@ -34,5 +37,11 @@ public class Table implements Element,Visitee {
     @Override
     public void accept(Visitor visitor) {
 
+        visitor.visitTabel(this);
+    }
+
+    public String getName() {
+
+        return tableTitle;
     }
 }

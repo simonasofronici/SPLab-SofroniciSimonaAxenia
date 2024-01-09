@@ -38,5 +38,11 @@ public class ImageProxy implements Element, Visitee {
     @Override
     public void accept(Visitor visitor) {
 
+        visitor.visitImageProxy(this);
+    }
+
+    public String getName() {
+
+        return imageName;
     }
 }
