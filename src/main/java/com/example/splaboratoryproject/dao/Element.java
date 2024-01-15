@@ -1,6 +1,6 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.dao;
 
-public interface Element extends Visitee{
+public interface Element extends Visitee {
 
     public void print();
     public void addElement(Element element);

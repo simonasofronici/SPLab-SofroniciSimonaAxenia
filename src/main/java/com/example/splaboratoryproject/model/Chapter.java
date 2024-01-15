@@ -1,4 +1,6 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.model;
+import com.example.splaboratoryproject.dao.Element;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,9 +1,11 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.splaboratoryproject.dao.AlignStrategy;
+import com.example.splaboratoryproject.dao.Element;
+import com.example.splaboratoryproject.dao.Visitee;
+import com.example.splaboratoryproject.dao.Visitor;
 
-public class Paragraph implements Element , Visitee{
+public class Paragraph implements Element, Visitee {
     private String text;
     private AlignStrategy alignStrategy; // New field alignment strategy
 

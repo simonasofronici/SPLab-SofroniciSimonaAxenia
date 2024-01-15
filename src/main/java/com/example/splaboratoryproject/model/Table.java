@@ -1,10 +1,10 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.model;
 
 
+import com.example.splaboratoryproject.dao.Element;
+import com.example.splaboratoryproject.dao.Visitee;
+import com.example.splaboratoryproject.dao.Visitor;
 import lombok.Getter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 public class Table implements Element, Visitee {

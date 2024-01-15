@@ -1,4 +1,4 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.model;
 
 public class Content {
     private String text;

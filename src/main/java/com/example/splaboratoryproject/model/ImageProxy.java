@@ -1,4 +1,9 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.model;
+
+import com.example.splaboratoryproject.dao.Element;
+import com.example.splaboratoryproject.dao.Visitee;
+import com.example.splaboratoryproject.dao.Visitor;
+import com.example.splaboratoryproject.model.Image;
 
 public class ImageProxy implements Element, Visitee {
     private Image realImage;

@@ -1,4 +1,6 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.dao;
+
+import com.example.splaboratoryproject.model.*;
 
 public interface Visitor<T> {
 
