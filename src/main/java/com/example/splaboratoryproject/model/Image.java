@@ -1,5 +1,9 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.model;
 
+
+import com.example.splaboratoryproject.dao.Element;
+import com.example.splaboratoryproject.dao.Visitee;
+import com.example.splaboratoryproject.dao.Visitor;
 
 import java.util.concurrent.TimeUnit;
 

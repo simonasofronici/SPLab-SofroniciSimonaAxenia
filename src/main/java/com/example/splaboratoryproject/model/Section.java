@@ -1,10 +1,13 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.splaboratoryproject.dao.Visitee;
+import com.example.splaboratoryproject.dao.Visitor;
 import lombok.Getter;
 import lombok.Setter;
-import com.example.splaboratoryproject.Element;
+import com.example.splaboratoryproject.dao.Element;
 
 public class Section implements Element, Visitee {
 

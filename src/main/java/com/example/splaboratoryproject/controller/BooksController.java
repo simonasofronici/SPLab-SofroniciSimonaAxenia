@@ -1,11 +1,12 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.controller;
 
+import com.example.splaboratoryproject.model.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.example.splaboratoryproject.model.*;
 @RestController
 @RequestMapping("/books")
 public class BooksController {

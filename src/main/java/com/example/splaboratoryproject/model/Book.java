@@ -1,9 +1,13 @@
-package com.example.splaboratoryproject;
+package com.example.splaboratoryproject.model;
+
+import com.example.splaboratoryproject.dao.Element;
+import com.example.splaboratoryproject.dao.Visitee;
+import com.example.splaboratoryproject.dao.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book extends Section implements Element,Visitee {
+public class Book extends Section implements Element, Visitee {
     private List<Author> authors;
     private List<Chapter> chapters;
 
@@ -53,7 +57,9 @@ public class Book extends Section implements Element,Visitee {
 
     @Override
     public void accept(Visitor visitor) {
-         super.accept(visitor);
+
+        //visitor.visitBook(this);
+        super.accept(visitor);
     }
 }
 
